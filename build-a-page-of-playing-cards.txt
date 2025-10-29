@@ -1,0 +1,98 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Playing Cards Page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="playing-cards">
+    <!-- Card 1 -->
+    <div class="card hearts">
+      <div class="left">♥A</div>
+      <div class="middle">♥</div>
+      <div class="right">♥A</div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card spades">
+      <div class="left">♠K</div>
+      <div class="middle">♠</div>
+      <div class="right">♠K</div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card diamonds">
+      <div class="left">♦7</div>
+      <div class="middle">♦</div>
+      <div class="right">♦7</div>
+    </div>
+  </main>
+</body>
+</html>
+
+
+** end of index.html **
+
+** start of styles.css **
+
+/* Main container */
+#playing-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+/* Each card */
+.card {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  height: 200px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+/* Left, middle, right alignment */
+.left {
+  align-self: flex-start;
+  font-size: 20px;
+}
+
+.middle {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.right {
+  align-self: flex-end;
+  font-size: 20px;
+  transform: rotate(180deg);
+}
+
+/* Optional styling for color */
+.hearts,
+.diamonds {
+  color: red;
+}
+
+.spades,
+.clubs {
+  color: black;
+}
+
+
+** end of styles.css **
+

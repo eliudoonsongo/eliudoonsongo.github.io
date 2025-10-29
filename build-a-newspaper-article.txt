@@ -1,0 +1,104 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Daily Insight</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css"
+    
+  </head>
+
+  <body>
+    <div class="newspaper">
+      <div class="name">The Daily Insight</div>
+      <div class="date">October 28, 2025</div>
+      <div class="headline">Technology Reshapes the Future of Work</div>
+      <div class="sub-headline">AI and automation lead the next wave of innovation</div>
+      <div class="author">By Ooga Eliud Onsongo</div>
+      <p class="text">
+        In an era where technology evolves faster than ever, industries across the globe are
+        embracing artificial intelligence to transform how people work. From healthcare to
+        transportation, automation is changing the rules of productivity and efficiency.
+      </p>
+      <p class="text">
+        Experts predict that while automation may replace some jobs, it will also create new
+        opportunities that demand creativity, adaptability, and emotional intelligence. The future
+        workforce will likely blend human ingenuity with machine precision to build a smarter, more
+        connected world.
+      </p>
+    </div>
+  </body>
+</html>
+
+
+** end of index.html **
+
+** start of styles.css **
+
+
+      html {
+        font-size: 24px;
+      }
+
+      .newspaper {
+        font-size: 16px;
+        font-family: 'Open Sans', sans-serif;
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        background-color: #fdfcf8;
+      }
+
+      .name {
+        font-size: 2rem;
+        font-family: 'Times New Roman', serif;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .date {
+        text-align: center;
+        margin-bottom: 20px;
+        font-style: italic;
+      }
+
+      .headline {
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .sub-headline {
+        font-weight: 100;
+        font-size: 1.5em;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .author {
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: right;
+        margin-bottom: 20px;
+      }
+
+      .text {
+        text-indent: 20px;
+        line-height: 2em;
+        margin-bottom: 20px;
+      }
+
+      .text::first-letter {
+        font-weight: bold;
+        font-size: 2em;
+      }
+
+** end of styles.css **
+

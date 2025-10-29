@@ -1,0 +1,101 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored Boxes</title>
+    <link ref="stylesheet" href="styles.css"
+</head>
+<body>
+
+<div class="container">
+  <form>
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="position">Job Position:</label>
+    <select id="position" name="position" required>
+      <option value="">Select a position</option>
+      <option value="developer">Developer</option>
+      <option value="designer">Designer</option>
+    </select>
+
+    <fieldset class="radio-group">
+      <legend>Availability</legend>
+
+      <input type="radio" id="fulltime" name="availability" value="fulltime">
+      <label for="fulltime">Full-Time</label>
+
+      <input type="radio" id="parttime" name="availability" value="parttime">
+      <label for="parttime">Part-Time</label>
+    </fieldset>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message"></textarea>
+
+    <button type="submit">Submit Application</button>
+  </form>
+ </div>
+</body>
+</html>
+
+
+
+** end of index.html **
+
+** start of styles.css **
+
+
+/* 11. :focus pseudo-class (use list selector in this exact order) */
+input:focus,
+textarea:focus {
+  border-color: #007bff; /* Blue border on focus */
+  outline: none;
+}
+
+/* 12. :invalid pseudo-class (exact order: input, select, textarea) */
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border-color: red;
+}
+
+/* 13. :valid pseudo-class (exact order: input, select, textarea) */
+input:valid,
+select:valid,
+textarea:valid {
+  border-color: green;
+}
+
+/* 14. :hover pseudo-class for button */
+button:hover {
+  background-color: #0056b3; /* Changes color on hover */
+  cursor: pointer;
+}
+
+/* 15–17. :checked pseudo-class for .radio-group radio buttons */
+.radio-group input[type="radio"]:checked {
+  border-color: #007bff;      /* Adds border color */
+  background-color: #cce5ff;  /* Adds background color */
+  box-shadow: 0 0 5px #007bff; /* Adds box shadow */
+}
+
+/* 18. :checked + label changes label color when selected */
+.radio-group input[type="radio"]:checked + label {
+  color: #007bff;
+}
+
+/* 19. :first-of-type pseudo-class on first input */
+input:first-of-type {
+  border-radius: 10px; /* Example of styling the first input differently */
+  border: 2px solid orange;
+}
+
+
+** end of styles.css **
+

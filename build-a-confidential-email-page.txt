@@ -1,0 +1,110 @@
+** start of index.html **
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Confidential Email</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="email">
+    <div id="confidential">CONFIDENTIAL</div>
+    <div id="top-secret">TOP SECRET</div>
+
+    <header>
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <div class="title">Private Mail</div>
+        <div class="subtitle">Confidential delivery</div>
+      </div>
+    </header>
+
+    <p>
+      Dear Agent,
+      Please review the attached documents regarding the Q4 initiative. Some items are 
+      <span class="blurred">sensitive</span> and should not be shared outside the team.
+    </p>
+
+    <p>
+      Location details: <span class="blurred">Sector 7G</span>, rendezvous at 
+      <span class="blurred">2200 hours</span>. Use the codeword provided in the briefing.
+    </p>
+
+    <p>
+      Notes: All comms must go through the secured channel. If you discover a leak, 
+      <span class="blurred">report immediately</span> to the operations lead.
+    </p>
+
+    <p class="end">-- End of message --</p>
+  </main>
+</body>
+</html>
+
+
+** end of index.html **
+
+** start of styles.css **
+
+/* styles.css */
+:root{
+  --paper:#fffef7;
+  --ink:#222;
+  --accent:#b30000;
+  --stamp-bg: rgba(179,0,0,0.08);
+}
+body{
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg,#f2f5f7, #e9eef2);
+  padding: 40px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  min-height:100vh;
+  color:var(--ink);
+}
+
+#email{
+  background: var(--paper);
+  padding: 50px; /* required */
+  margin-top: 50px; /* required */
+  width: 500px; /* required */
+  border: 2px solid #333; /* required */
+  box-sizing: border-box; /* required */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border-radius: 8px;
+}
+
+/* Stamps */
+#confidential, #top-secret{
+  display:inline-block; /* required */
+  padding: 10px 14px; /* required padding on all sides */
+  margin-left: 18px; /* required left margin */
+  border: 2px dashed rgba(0,0,0,0.2); /* required border */
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:var(--accent);
+  background: var(--stamp-bg);
+  transform-origin: center;
+  margin-bottom: 18px;
+}
+
+#confidential{ transform: rotate(-12deg); }
+#top-secret{ transform: rotate(8deg); }
+
+p{ line-height:1.6; margin:18px 0; color:#2b2b2b; }
+
+.blurred{ filter: blur(3px); }
+
+header{ display:flex; align-items:center; gap:10px; }
+.logo{ width:36px; height:36px; border-radius:6px; background:conic-gradient(from 200deg,#fff, #b30000); box-shadow:inset 0 0 6px rgba(0,0,0,0.06);} 
+
+.title{ font-size:14px; font-weight:700; }
+.subtitle{ font-size:12px; opacity:0.7; }
+.end{ font-size:12px; opacity:0.85; }
+
+
+** end of styles.css **
+
